@@ -28,7 +28,8 @@
         <div class="child-2">
             <div class="form-container">
                 <h1>Login</h1>
-                <form action="#" method="post">
+                <form action="{{ route('login') }}" method="POST">
+                    @csrf
                     <div>
                         <input type="text" name="email" id="email" placeholder="Email" required>
                     </div>
@@ -43,21 +44,22 @@
             </div>
             <div class="modal-container" id="modalContainer">
                 <div class="modal">
-                    <h2>Create an Account</h2>
-                    <form action="#" method="post">
-                        <div class="userName">
-                            <div><input type="text" name="firstName" placeholder="First name" required></div> 
-                            <div><input type="text" name="lastName" placeholder="Last name" required></div>
-                        </div>
-                        <div>
-                            <input type="email" name="email" placeholder="Email address" required>
-                        </div>
-                        <div>
-                            <input type="password" name="password" placeholder="password">
-                        </div>
-                        <div>
-                            <input type="submit" name="submitButton" id="create account" value="create an account">
-                        </div>
+                    <form action="{{ route('register') }}" method="POST">
+                        @csrf
+                        <h2>Create an Account</h2>
+                            <div class="userName">
+                                <div><input type="text" name="firstName" placeholder="First name" required></div> 
+                                <div><input type="text" name="lastName" placeholder="Last name" required></div>
+                            </div>
+                            <div>
+                                <input type="email" name="email" placeholder="Email address" required>
+                            </div>
+                            <div>
+                                <input type="password" name="password" placeholder="password">
+                            </div>
+                            <div>
+                                <input type="submit" name="submitButton" id="createAccount" value="create an account">
+                            </div>
                     </form>
                 </div>
             </div>

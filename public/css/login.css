@@ -141,7 +141,8 @@ body {
     transition: 0.5s;
 }
 
-.form-container button:hover {
+.form-container button:hover,
+.modal input[name="submitButton"] {
     cursor: pointer;
     background: #7e7d7d;
 }
