@@ -34,7 +34,8 @@
                         <input type="text" name="email" id="email" placeholder="Email" required>
                     </div>
                     <div>
-                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="Password" id="userInput" required>
+                        <input type="checkbox" onclick="showPassword()" id="userInput">show password
                     </div>
                     <hr>   
                     <input type="submit" value="Login">
@@ -44,7 +45,7 @@
             </div>
             <div class="modal-container" id="modalContainer">
                 <div class="modal">
-                    <form action="{{ route('register') }}" method="POST">
+                    <form action="{{ route( 'register') }}" method="POST">
                         @csrf
                         <h2>Create an Account</h2>
                             <div class="userName">
@@ -55,7 +56,8 @@
                                 <input type="email" name="email" placeholder="Email address" required>
                             </div>
                             <div>
-                                <input type="password" name="password" placeholder="password">
+                                <input type="password" name="password" placeholder="password" id="userInput"r>
+                                <input type="checkbox" onclick="showPassword()" id="userInput">show password
                             </div>
                             <div>
                                 <input type="submit" name="submitButton" id="createAccount" value="create an account">

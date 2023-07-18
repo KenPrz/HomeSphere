@@ -44,12 +44,13 @@ class authController extends Controller
         if(!$user){
             return redirect(route('login'))->with('error',"input!!");
         }
-        redirect(route('login'));
+        return redirect(route('login'))->with('success', "Registration successful! Please log in.");
     }
 
-    public function logout(){
+    public function logout()
+    {
         Session::flush();
         Auth::logout();
-        redirect(route('login'))->with('success',"Registration Success!");
-    }
+        return redirect(route('login'))->with('success', "Logout Successful!");
+    }    
 }
