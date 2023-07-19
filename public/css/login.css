@@ -8,7 +8,7 @@
 }
 
 *{
-    border: 1px dotted gray;
+    /* border: 1px dotted gray; */
 }
 
 body {
@@ -96,7 +96,6 @@ body {
     width: 90%;
     padding: .5em;
 }
-
 .form-container form input[name="email"],
 .form-container form input[name="password"],
 .modal form input[name="email"],
@@ -107,6 +106,7 @@ body {
     border: 1px solid black;
     width: 90%;
     padding: .5em;
+    border-radius: 4px;
 }
 
 .form-container form input[type="submit"] {

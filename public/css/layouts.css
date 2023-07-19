@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    /* border: 2px dotted rgb(181, 180, 180); */
+}
+
+:root {
+    --mainFont: 'Poppins', sans-serif;
+    --secondaryFont: 'Comfortaa', cursive;
+    --backgroundColor: #f0f0f0;
+    --fontColor: #515151;
+    --dangerRed:#DC3545;
+    --bright_blue: #18A0FB;
+    --hover:#7788996b;
+}
+
+body {
+    margin: 0;
+    font-family: var(--mainFont);
+    background-color: var(--backgroundColor);
+    display: flex; /* Add flex display to allow equal height columns */
+    flex-direction: column; /* Set the main container as a column */
+    min-height: 100vh; /* Set a minimum height to fill the viewport */
+}
+
+.component-navbar {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+    z-index: 2; /* Set a higher z-index to place the navbar above other elements */
+    position: relative; /* Set the navbar's position to relative */
+}
+
+.component-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.component-navbar li {
+    padding: 5px 10px;
+    font-family: var(--secondaryFont);
+}
+.notification img{
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    width: 20px;
+}
+.right-section {
+    display: flex;
+}
+
+.right-section li:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* Style for links */
+a {
+    text-decoration: none;
+    color: var(--fontColor);
+    transition: .5s ease;
+}
+
+.selection-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.selection-container img,
+.component-navbar img{
+    padding: .5em 0 .5em 1em;
+    height: 30px;
+    width: 30px;
+}
+/* Style for links on hover */
+.side-nav-selection a:hover {
+    border-radius: 5px;
+    color: black;
+    background-color: var(--hover);
+}
+
+.body-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1; /* Allow the main container to take up the remaining height */
+}
+
+.sidenav {
+    width: 15%;
+    background-color: white; /* Add a background color to the sidebar */
+    position: relative; /* Set the sidenav's position to relative */
+}
+
+.sidenav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Apply justify-content: space-between */
+    height: 100%; /* Set the height of the container to occupy the full height */
+}
+
+.profile-image {
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image img {
+    margin-bottom: 0.5em; /* Add margin between the image and the text */
+    width: 150px; /* Set the width of the image (adjust as needed) */
+    height: auto; /* Keep the aspect ratio */
+}
+
+.image-text {
+    text-align: center; /* Center the text within the div */
+}
+
+.image-text h5 {
+    margin-bottom: 0.2em; /* Add margin below the h4 heading */
+}
+
+.image-text h2 {
+    margin: 0; /* Remove default margin of h2 */
+}
+
+.profile-image h2 {
+    font-size: 16px;
+}
+
+.side-nav-selection ul {
+    padding: 1.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav-selection li {
+    color: black;
+    list-style: none;
+    padding: .8em 1em;
+}
+.logout-section{
+    padding: 2em;
+}
+.logout-section a:hover{
+    color: var(--dangerRed);
+    transition: .5s ease;
+}
+.main-content {
+    flex: 1; /* Allow the main content to take up the remaining width */
+    padding: 20px; /* Add some padding for spacing */
+    z-index: 1; /* Set a lower z-index to place the main content behind the navbar */
+}

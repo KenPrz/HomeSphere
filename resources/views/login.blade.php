@@ -15,13 +15,13 @@
             </div>
                 <div class="icons-div">
                     <div class="icons">
-                        <img src="{{asset('img-assets/light.svg')}}" alt="light">
-                        <img src="{{asset('img-assets/plug.svg')}}" alt="plug">
-                        <img src="{{asset('img-assets/temp.svg')}}" alt="temp">
-                        <img src="{{asset('img-assets/humidity.svg')}}" alt="humidity">
+                        <img src="{{asset('img-assets/login-vectors/light.svg')}}" alt="light">
+                        <img src="{{asset('img-assets/login-vectors/plug.svg')}}" alt="plug">
+                        <img src="{{asset('img-assets/login-vectors/temp.svg')}}" alt="temp">
+                        <img src="{{asset('img-assets/login-vectors/humidity.svg')}}" alt="humidity">
                     </div>
                     <div class="home-icon">
-                        <img src="{{asset('img-assets/house.svg')}}" alt="house icon">
+                        <img src="{{asset('img-assets/login-vectors/house.svg')}}" alt="house icon">
                     </div>
                 </div>
         </div>

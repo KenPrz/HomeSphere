@@ -36,4 +36,3 @@ Route::get('/register', function () {
 Route::post('/register', [authController::class, 'register'])->name('register');
 
 Route::get('/logout', [authController::class, 'logout'])->name('logout');
-
