@@ -13,7 +13,6 @@ class authController extends Controller
     public function showLogin(){
         return view('login');
     }
-
     protected function login(Request $request){
         $request -> validate([
             "email" => "required | email",
