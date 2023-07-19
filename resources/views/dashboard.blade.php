@@ -8,5 +8,7 @@
 </head>
 <body>
     <a href="{{ route('logout') }}">logout</a>
+    $user = Auth::user();
+    print_r($user);
 </body>
 </html>

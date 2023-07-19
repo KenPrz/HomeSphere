@@ -8,13 +8,18 @@
 }
 
 *{
-    /* border: 1px dotted gray; */
+    border: 1px dotted gray;
 }
 
 body {
     background-color: #f1f1f1;
     margin: 0;
     padding: 0;
+}
+
+.alert-danger {
+    color: #e71a2e;
+    font-size: 12px;
 }
 
 .container {
@@ -102,7 +107,6 @@ body {
     border: 1px solid black;
     width: 90%;
     padding: .5em;
-    border-radius: 4px;
 }
 
 .form-container form input[type="submit"] {

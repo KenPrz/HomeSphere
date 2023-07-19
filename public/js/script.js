@@ -12,8 +12,8 @@ window.addEventListener("click", function (event) {
     }
 });
 //show password function 
-function showPassword() {
-    var x = document.getElementById("userInput");
+function showPassword(inputId) {
+    var x = document.getElementById(inputId);
     if (x.type === "password") {
         x.type = "text";
     } else {

@@ -34,8 +34,15 @@
                         <input type="text" name="email" id="email" placeholder="Email" required>
                     </div>
                     <div>
-                        <input type="password" name="password" placeholder="Password" id="userInput" required>
-                        <input type="checkbox" onclick="showPassword()" id="userInput">show password
+                        <input type="password" name="password" placeholder="Password" id="loginPasswordInput" required>
+                        <input type="checkbox" onclick="showPassword('loginPasswordInput')">Show password
+
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+                        
                     </div>
                     <hr>   
                     <input type="submit" value="Login">
@@ -56,8 +63,8 @@
                                 <input type="email" name="email" placeholder="Email address" required>
                             </div>
                             <div>
-                                <input type="password" name="password" placeholder="password" id="userInput"r>
-                                <input type="checkbox" onclick="showPassword()" id="userInput">show password
+                                <input type="password" name="password" placeholder="Password" id="createAccountPasswordInput" required>
+                                <input type="checkbox" onclick="showPassword('createAccountPasswordInput')">Show password
                             </div>
                             <div>
                                 <input type="submit" name="submitButton" id="createAccount" value="create an account">
