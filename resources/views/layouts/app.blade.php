@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="logout-section">
-                    <a href="{{ route('login') }}">Logout</a>
+                    <a href="{{ route('logout') }}">Logout</a>
                 </div>
             </div>
         </div>
