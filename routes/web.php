@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\authController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+// Home Page
 Route::get('/', function () {
     if (Auth::check()) {
         return redirect()->route('dashboard');
@@ -23,16 +25,18 @@ Route::get('/', function () {
     }
 })->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth')->name('dashboard');
-
-Route::get('/login', [authController::class, 'showLogin'])->name('showLogin');
-Route::post('/login', [authController::class, 'login'])->name('login');
-
-Route::get('/register', function () {
-    return redirect()->route('login');
+// Dashboard
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
-Route::post('/register', [authController::class, 'register'])->name('register');
 
-Route::get('/logout', [authController::class, 'logout'])->name('logout');
+// Login
+Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+// Registration
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('showRegistrationForm');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+
+// Logout
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

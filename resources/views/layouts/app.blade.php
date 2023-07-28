@@ -1,6 +1,3 @@
-@php
-    $user = Auth::user(); // Retrieve the authenticated user
-@endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/layouts.css')}}">
-    <title>test</title>
+    <title>Home</title>
 </head>
 <body>
     <div class="component-navbar">
