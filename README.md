@@ -2,7 +2,7 @@
 
 HomeSphere is a passion project and capstone project currently being developed by fourth-year students from Bicol University. It is a web-based home automation system built using Laravel. The system is planned to utilize devices designed with ESP32 microcontrollers that will utilize the system's API to send and receive data for controlling devices connected to the microcontrollers.
 
-HomeSphere aims to provide a convenient and easy way to automate homes. It will allow users to control their lights, appliances, and other devices from anywhere in the world. The system is still under development, but it has the potential to revolutionize the way people live. It is a project that is both ambitious and innovative, and it is sure to have a positive impact on the world.
+HomeSphere aims to provide a convenient and easy way to automate homes. It will allow users to control their lights, appliances, and other devices from anywhere in the world. The system is still under development, but it has the potential to revolutionize the way people live.
 
 ## Features
 
