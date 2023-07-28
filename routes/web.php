@@ -24,7 +24,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/dashboard', function () {
-    return view('dashboard'); // Replace 'dashboard' with the actual view name for your dashboard page.
+    return view('dashboard');
 })->middleware('auth')->name('dashboard');
 
 Route::get('/login', [authController::class, 'showLogin'])->name('showLogin');

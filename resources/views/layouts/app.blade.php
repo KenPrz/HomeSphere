@@ -1,5 +1,5 @@
 @php
-        $user = Auth::user(); // Retrieve the authenticated user
+    $user = Auth::user(); // Retrieve the authenticated user
 @endphp
 <!DOCTYPE html>
 <html lang="en">

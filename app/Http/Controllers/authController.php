@@ -22,7 +22,7 @@ class authController extends Controller
         var_dump($requestData);
         $credentials = $request->only('email','password');
         if(Auth::attempt($credentials)){
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('dashboard'));
         }
         return redirect(route('login'))->with('error',"Invalid Email of password");
     }
