@@ -12,7 +12,7 @@
     --fontColor: #515151;
     --dangerRed: #DC3545;
     --bright_blue: #18A0FB;
-    --hover: #7788996b;
+    --hover: #696969;
 }
 
 body {
@@ -28,6 +28,7 @@ body {
 }
 
 .component-navbar {
+    width: 100%;
     background-color: white;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -189,6 +190,7 @@ a {
 @media (max-width: 767px) {
 
     .component-navbar {
+        width: 100%;
         position: sticky;
         top: 0;
         z-index: 2;

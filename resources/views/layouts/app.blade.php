@@ -38,6 +38,12 @@
                             </a>
                             <a href="#">
                                 <div class="selection-container">
+                                    <img src="{{asset('img-assets/nav-vectors/account.svg')}}" alt="light">
+                                    <li>Profile</li>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="selection-container">
                                     <img src="{{asset('img-assets/nav-vectors/devices.svg')}}" alt="light">
                                     <li>Appliances</li>
                                 </div>
@@ -52,12 +58,6 @@
                                 <div class="selection-container">
                                     <img src="{{asset('img-assets/nav-vectors/modes.svg')}}" alt="light">
                                     <li>Modes</li>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="selection-container">
-                                    <img src="{{asset('img-assets/nav-vectors/account.svg')}}" alt="light">
-                                    <li>Account</li>
                                 </div>
                             </a>
                         </ul>
