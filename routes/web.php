@@ -1,6 +1,4 @@
 <?php
-
-
 use App\Http\Controllers\authController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserUpdateController;

@@ -25,9 +25,9 @@ class authController extends Controller
             "password" => "required",
         ]);
 
-        // Retrieve all request data
-        $requestData = $request->all();
-        var_dump($requestData);
+        // // Retrieve all request data
+        // $requestData = $request->all();
+        // var_dump($requestData);
 
         // Extract email and password from the request data
         $credentials = $request->only('email', 'password');

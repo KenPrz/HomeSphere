@@ -31,19 +31,19 @@
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <div>
-                        <input type="text" name="email" id="email" placeholder="Email" required>
+                        <div>
+                            <input type="text" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div>
+                            <input type="password" name="password" placeholder="Password" id="loginPasswordInput" required>
+                                <input type="checkbox" onclick="showPassword('loginPasswordInput')"> Show Password
+                        </div>
                     </div>
-                    <div>
-                        <input type="password" name="password" placeholder="Password" id="loginPasswordInput" required>
-                        <input type="checkbox" onclick="showPassword('loginPasswordInput')">Show password
-
-                        @if(session('error'))
-                            <div class="alert alert-danger">
-                                {{ session('error') }}
-                            </div>
-                        @endif
-                        
-                    </div>
+                    @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                     <hr>   
                     <input type="submit" value="Login">
                     <a href="#">Forgot password?</a>
