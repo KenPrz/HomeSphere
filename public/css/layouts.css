@@ -132,10 +132,15 @@ a {
 .profile-image img {
     margin-bottom: 0.5em;
     /* Add margin between the image and the text */
-    width: 80%;
+    width: 50%;
     /* Set the width of the image (adjust as needed) */
     height: auto;
     /* Keep the aspect ratio */
+    border-radius: 2%;
+    /* Make the image circular */
+    object-fit: cover;
+    /* Center-crop the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .image-text {
@@ -144,7 +149,7 @@ a {
 }
 
 .image-text h5 {
-    margin-bottom: 0.2em;
+    margin: 0 0 0.2em 0;
     /* Add margin below the h4 heading */
 }
 
@@ -164,6 +169,7 @@ a {
 }
 
 .side-nav-selection li {
+    font-weight: 600;
     font-size: 16px;
     color: black;
     list-style: none;

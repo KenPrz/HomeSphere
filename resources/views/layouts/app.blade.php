@@ -22,7 +22,11 @@
             <div class="sidenav-container">
                 <div class="upper-section">
                     <div class="profile-image">
-                        <img src="{{asset('img/dummy.png')}}" alt="claire">
+                        @if($user->profile_image)
+                            <img src="{{ asset('storage/' . $user->profile_image) }}" alt="Profile Image">
+                        @else
+                            <img src="{{ asset('img-assets/default_avatar.png') }}" alt="Default Image">
+                        @endif
                         <div class="image-text">
                             <h5>Welcome Back!!</h5>
                             <h2><strong>{{ $user->first_name }} {{ $user->last_name }}</strong></h2>

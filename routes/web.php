@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\authController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserUpdateController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -27,6 +28,8 @@ Route::get('/', function () {
 
 // Dashboard
 Route::middleware('auth')->group(function () {
+    // routes/web.php
+    Route::post('/upload-image',[UserUpdateController::class, 'uploadImage'])->name('uploadImage');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 

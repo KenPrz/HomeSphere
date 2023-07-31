@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
-    /* border: 2px dotted rgb(181, 180, 180); */
+    /* border: 1px dotted red; */
 }
 
 :root {
@@ -51,7 +51,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 1.5em 1em 0;
+    /* padding: 0 1.5em 1em 0;  remove additional spaces*/
+    padding: 1em;
     width: 30%; /* Adjust the width for the image section */
 }
 
@@ -59,7 +60,7 @@
     border-radius: 50%;
     height: 12em;
     width: 12em;
-    padding: 0 1em 1em 1em;
+    padding: 1em;
 }
 
 .image-buttons .button-link {
@@ -82,6 +83,7 @@
 }
 
 .user-details-section {
+    padding-top: 7vh;
     width: 70%; /* Adjust the width for the user details section */
 }
 
@@ -95,6 +97,7 @@
     margin: 0;
 }
 .user-details-section li {
+    display: flex;
     width: 80%; /* Adjust the width for smaller screens */
     list-style: none;
     background-color: #696969;
@@ -103,7 +106,9 @@
     border-radius: 10px;
     transition: 0.5s ease;
 }
-
+#arrow{
+    
+}
 .user-details-section a {
     color: white;
 }
