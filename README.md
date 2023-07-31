@@ -91,6 +91,10 @@ run the command inside the project file
 ```
 php artisan migrate
 ```
+#### Perform a storage link
+```
+php artisan storage:link
+```
 #### Serve the project
 
 local machine serving
