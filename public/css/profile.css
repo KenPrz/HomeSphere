@@ -41,7 +41,8 @@
     margin-top: 20px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; /* Prevent items from wrapping */
+    flex-wrap: nowrap;
+    /* Prevent items from wrapping */
     justify-content: space-between;
 }
 
@@ -53,7 +54,8 @@
     justify-content: center;
     /* padding: 0 1.5em 1em 0;  remove additional spaces*/
     padding: 1em;
-    width: 30%; /* Adjust the width for the image section */
+    width: 30%;
+    /* Adjust the width for the image section */
 }
 
 .image-section img {
@@ -84,7 +86,8 @@
 
 .user-details-section {
     padding-top: 7vh;
-    width: 70%; /* Adjust the width for the user details section */
+    width: 70%;
+    /* Adjust the width for the user details section */
 }
 
 .user-details-section p {
@@ -92,23 +95,34 @@
     margin: 0;
     font-size: 16px;
 }
-.user-details-section ul{
+
+.user-details-section ul {
     padding: 0;
     margin: 0;
 }
+
 .user-details-section li {
     display: flex;
-    width: 80%; /* Adjust the width for smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    /* Adjust the width for smaller screens */
     list-style: none;
     background-color: #696969;
     padding: 1em;
     margin: 1em;
     border-radius: 10px;
     transition: 0.5s ease;
+    position: relative;
+    /* Add a relative position to the li element */
 }
-#arrow{
-    
+
+#arrow {
+    align-self: flex-end;
+    transition: 0.5s ease;
+    /* Add a transition for smoother animation */
 }
+
 .user-details-section a {
     color: white;
 }
@@ -117,32 +131,70 @@
     background-color: #a9a9a9;
 }
 
+.user-details-section li:hover #arrow {
+    animation: moveLeft 0.5s ease forwards;
+    /* Apply the animation on hover */
+}
+/* Keyframes for the arrow animation */
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-15px);
+        /* Adjust the value to control the leftward movement */
+    }
+}
+
+/* Keyframes for the arrow reverse animation */
+@keyframes moveRight {
+    0% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.user-details-section li:not(:hover) #arrow {
+    animation: moveRight 0.3s ease forwards;
+    /* Apply the reverse animation when not hovered */
+}
+
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-    .header{
+    .header {
         text-align: center;
     }
+
     .profile-card {
         margin: 0;
         padding: .5em;
         width: 90%;
     }
-    .profile-settings{
+
+    .profile-settings {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .image-section {
-        width: 100%; /* Make the image section full width on smaller screens */
+        width: 100%;
+        /* Make the image section full width on smaller screens */
     }
+
     .image-section img {
         height: 10em;
         width: 10em;
         padding: 0.5em;
     }
+
     .user-details-section {
-        width: 100%; /* Make the user details section full width on smaller screens */
+        width: 100%;
+        /* Make the user details section full width on smaller screens */
     }
 }
 
@@ -151,10 +203,12 @@
         width: 95%;
         padding: 2em 1em;
     }
+
     .profile-settings {
         flex-direction: column;
         align-items: center;
     }
+
     .user-details-section li {
         margin: 0.5em;
     }
