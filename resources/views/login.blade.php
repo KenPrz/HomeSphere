@@ -30,12 +30,12 @@
                 <h1>Login</h1>
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
-                    <div>
+                    <div class="input-container">
                         <div>
                             <input type="text" name="email" id="email" placeholder="Email" required>
                         </div>
                         <div>
-                            <input type="password" name="password" placeholder="Password" id="loginPasswordInput" required>
+                            <input type="password" name="password" placeholder="Password" id="loginPasswordInput" required><br>
                                 <input type="checkbox" onclick="showPassword('loginPasswordInput')"> Show Password
                         </div>
                     </div>

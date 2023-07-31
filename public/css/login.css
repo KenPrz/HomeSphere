@@ -8,7 +8,7 @@
 }
 
 *{
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
 }
 
 body {
@@ -76,10 +76,10 @@ body {
 }
 
 .form-container {
-    width: 80%;
+    width: 65%;
     background-color: #ffff;
+    text-align: center;
     border-radius: 5px;
-    margin-top: 10vh;
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,12 @@ body {
     justify-content: center;
     width: 100%;
 }
-
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .form-container form div,
 .modal form div {
     width: 90%;
@@ -108,7 +113,7 @@ body {
     height: 2em;
     background-color: white;
     border: 1px solid black;
-    width: 90%;
+    width: 100%;
     padding: .5em;
     border-radius: 4px;
 }
@@ -219,13 +224,14 @@ body {
     }
 
     .form-container {
+        text-align: center;
         margin: 0;
         width: 100%;
     }
 
     .form-container form input[name="email"],
     .form-container form input[name="password"] {
-        height: 60%;
+        height: 1rem;
         width: 90%;
     }
 
@@ -252,5 +258,7 @@ body {
         font-size: 21px;
         margin: 0;
     }
+
+    
 }
 
