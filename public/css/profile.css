@@ -104,21 +104,26 @@
     padding: 0;
     margin: 0;
 }
+.user-details-section a {
+    padding: .3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* Style for the child li elements */
 .user-details-section li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    /* Adjust the width for smaller screens */
+    width: 80%; /* Adjust the width for smaller screens */
     list-style: none;
     background-color: #696969;
     padding: 1em;
-    margin: 1em;
+    margin: .3em;
     border-radius: 10px;
     transition: 0.5s ease;
-    position: relative;
-    /* Add a relative position to the li element */
+    position: relative; /* Add a relative position to the li element */
 }
 
 #arrow {
