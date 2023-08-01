@@ -19,15 +19,16 @@ class authController extends Controller
     // Handle user login attempt
     protected function login(Request $request)
     {
+        
         // Validate the incoming login request data
         $request->validate([
             "email" => "required|email",
             "password" => "required",
         ]);
 
-        // // Retrieve all request data
-        // $requestData = $request->all();
-        // var_dump($requestData);
+        // Retrieve all request data
+        $requestData = $request->all();
+        var_dump($requestData);
 
         // Extract email and password from the request data
         $credentials = $request->only('email', 'password');

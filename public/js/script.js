@@ -25,3 +25,5 @@ function togglePasswordVisibility() {
         confirmPasswordInput.type = "password";
     }
 }
+
+

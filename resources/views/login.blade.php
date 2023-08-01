@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
     <title>Login</title>
 </head>
+<div id="registration-toast" class="toast"></div>
 <body>
     <div class="container">
         <div class="child-1">
@@ -13,18 +15,8 @@
                 <h1>HomeSphere</h1>
                 <h2>A web-based home automation system using microcontrollers.</h2>
             </div>
-                <div class="icons-div">
-                    <div class="image-container">
-                        <div class="icons">
-                            <img src="{{asset('img-assets/login-vectors/light.svg')}}" alt="light">
-                            <img src="{{asset('img-assets/login-vectors/plug.svg')}}" alt="plug">
-                            <img src="{{asset('img-assets/login-vectors/temp.svg')}}" alt="temp">
-                            <img src="{{asset('img-assets/login-vectors/humidity.svg')}}" alt="humidity">
-                        </div>
-                        <div class="home-icon">
-                            <img src="{{asset('img-assets/login-vectors/house.svg')}}" alt="house icon">
-                        </div>
-                    </div>
+                <div class="image-container">
+                    <img src="{{asset('img-assets/login-vectors/home-main.svg')}}" alt="light">
                 </div>
         </div>
         <div class="child-2">
@@ -34,7 +26,7 @@
                     @csrf
                     <div class="input-container">
                         <div>
-                            <input type="text" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required>
+                            <input type="text" name="email" id="email" placeholder="Email" required>
                         </div>
                         <div>
                             <input type="password" name="password" placeholder="Password" id="loginPasswordInput" required><br>
@@ -105,3 +97,22 @@
 </html>
 <script src="{{ asset('js/script.js') }}"></script>
 
+<script>
+$(document).ready(function() {
+        // Check if there is a "success" session data set from the controller
+        @if(session('success'))
+            // Get the success message from the session
+            var successMessage = "{{ session('success') }}";
+            
+            // Show the toast notification with the success message
+            showNotification(successMessage);
+        @endif
+    });
+
+    // Function to show the toast notification
+    function showNotification(message) {
+        var toast = $('#registration-toast');
+        toast.text(message);
+        toast.fadeIn().delay(3000).fadeOut();
+    }
+</script>
