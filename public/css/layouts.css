@@ -25,6 +25,7 @@ body {
     /* Set the main container as a column */
     min-height: 100vh;
     /* Set a minimum height to fill the viewport */
+    box-sizing: border-box;
 }
 
 .component-navbar {
@@ -37,6 +38,7 @@ body {
     /* Set a higher z-index to place the navbar above other elements */
     position: relative;
     /* Set the navbar's position to relative */
+    box-sizing: border-box;
 }
 
 .component-navbar ul {
@@ -102,6 +104,7 @@ a {
     flex-direction: row;
     flex: 1;
     /* Allow the main container to take up the remaining height */
+    box-sizing: border-box;
 }
 
 .sidenav {
@@ -113,6 +116,7 @@ a {
     /* Add a background color to the sidebar */
     position: relative;
     /* Set the sidenav's position to relative */
+    box-sizing: border-box;
 }
 
 .sidenav-container {
@@ -196,7 +200,11 @@ a {
     /* Set a lower z-index to place the main content behind the navbar */
 }
 @media (max-width: 767px) {
-
+    .component-navbar,
+    .body-container,
+    .sidenav {
+        box-sizing: none;
+    }
     .component-navbar {
         width: 100%;
         position: sticky;
@@ -262,15 +270,20 @@ a {
         padding: 0;
     }
     .side-nav-selection ul {
-        border-radius: 10px;
-        margin: 0;
+        display: flex;
         flex-direction: row;
+        max-height: 30px;
+        margin: 0;
         /* Display navigation links in a row */
-        justify-content: space-around; 
+        justify-content: space-around;
         /* Center the navigation links */
+        align-items: center;
+    }
+    .selection-container{
+        padding: 1em;
     }
     .side-nav-selection li {
-        padding: 0.5em 0;
+        padding: 0.5em 2em 0.5 2em;
         /* Adjust padding for the navigation links */
     }
 
