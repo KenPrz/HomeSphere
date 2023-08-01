@@ -14,14 +14,16 @@
                 <h2>A web-based home automation system using microcontrollers.</h2>
             </div>
                 <div class="icons-div">
-                    <div class="icons">
-                        <img src="{{asset('img-assets/login-vectors/light.svg')}}" alt="light">
-                        <img src="{{asset('img-assets/login-vectors/plug.svg')}}" alt="plug">
-                        <img src="{{asset('img-assets/login-vectors/temp.svg')}}" alt="temp">
-                        <img src="{{asset('img-assets/login-vectors/humidity.svg')}}" alt="humidity">
-                    </div>
-                    <div class="home-icon">
-                        <img src="{{asset('img-assets/login-vectors/house.svg')}}" alt="house icon">
+                    <div class="image-container">
+                        <div class="icons">
+                            <img src="{{asset('img-assets/login-vectors/light.svg')}}" alt="light">
+                            <img src="{{asset('img-assets/login-vectors/plug.svg')}}" alt="plug">
+                            <img src="{{asset('img-assets/login-vectors/temp.svg')}}" alt="temp">
+                            <img src="{{asset('img-assets/login-vectors/humidity.svg')}}" alt="humidity">
+                        </div>
+                        <div class="home-icon">
+                            <img src="{{asset('img-assets/login-vectors/house.svg')}}" alt="house icon">
+                        </div>
                     </div>
                 </div>
         </div>
@@ -32,11 +34,14 @@
                     @csrf
                     <div class="input-container">
                         <div>
-                            <input type="text" name="email" id="email" placeholder="Email" required>
+                            <input type="text" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required>
                         </div>
                         <div>
                             <input type="password" name="password" placeholder="Password" id="loginPasswordInput" required><br>
-                                <input type="checkbox" onclick="showPassword('loginPasswordInput')"> Show Password
+                        </div>
+                        <div class="checkbox">
+                            <input name="password-checkbox" type="checkbox" id="showPasswordCheckbox" onclick="togglePasswordVisibility()">
+                            <label for="password-checkbox">Show password</label>
                         </div>
                     </div>
                     @if(session('error'))
@@ -44,6 +49,7 @@
                             {{ session('error') }}
                         </div>
                     @endif
+                    
                     <hr>   
                     <input type="submit" value="Login">
                     <a href="#">Forgot password?</a>
@@ -52,23 +58,44 @@
             </div>
             <div class="modal-container" id="modalContainer">
                 <div class="modal">
-                    <form action="{{ route( 'register') }}" method="POST">
+                    <form action="{{ route('register') }}" method="POST">
                         @csrf
                         <h2>Create an Account</h2>
+                        <div class="input-container">
                             <div class="userName">
-                                <div><input type="text" name="firstName" placeholder="First name" required></div> 
-                                <div><input type="text" name="lastName" placeholder="Last name" required></div>
+                                <div>
+                                    <!-- Use old() function to retain the value on validation failure -->
+                                    <input type="text" name="firstName" placeholder="First name" value="{{ old('firstName') }}" required>
+                                </div> 
+                                @error('firstName')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                                <div>
+                                    <!-- Use old() function to retain the value on validation failure -->
+                                    <input type="text" name="lastName" placeholder="Last name" value="{{ old('lastName') }}" required>
+                                </div>
+                                @error('lastName')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div>
-                                <input type="email" name="email" placeholder="Email address" required>
+                                <!-- Use old() function to retain the value on validation failure -->
+                                <input type="email" name="email" placeholder="Email address" value="{{ old('email') }}" required>
                             </div>
+                                @error('email')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                                <div>
+                                    <input type="password" name="password" placeholder="Password" id="createAccountPasswordInput" required style="margin-bottom: 1em">
+                                    <input type="password" name="password_confirmation" placeholder="Confirm Password" id="confirmPassword" required>
+                                    @error('password')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>                              
                             <div>
-                                <input type="password" name="password" placeholder="Password" id="createAccountPasswordInput" required>
-                                <input type="checkbox" onclick="showPassword('createAccountPasswordInput')">Show password
+                                <input type="submit" name="submitButton" id="createAccount" value="Create an account">
                             </div>
-                            <div>
-                                <input type="submit" name="submitButton" id="createAccount" value="create an account">
-                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -77,3 +104,4 @@
 </body>
 </html>
 <script src="{{ asset('js/script.js') }}"></script>
+

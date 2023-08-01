@@ -2,6 +2,7 @@
 const createAccButton = document.querySelector("#createAcc");
 const modalContainer = document.querySelector("#modalContainer");
 
+
 createAccButton.addEventListener("click", function () {
     modalContainer.style.display = "flex";
 });
@@ -12,11 +13,15 @@ window.addEventListener("click", function (event) {
     }
 });
 //show password function 
-function showPassword(inputId) {
-    var x = document.getElementById(inputId);
-    if (x.type === "password") {
-        x.type = "text";
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('loginPasswordInput');
+    var showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
+
+    if (showPasswordCheckbox.checked) {
+        passwordInput.type = "text";
+        confirmPasswordInput.type = "text";
     } else {
-        x.type = "password";
+        passwordInput.type = "password";
+        confirmPasswordInput.type = "password";
     }
 }

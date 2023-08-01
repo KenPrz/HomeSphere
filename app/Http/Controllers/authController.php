@@ -50,7 +50,9 @@ class authController extends Controller
             'firstName' => 'required',
             'lastName' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:8',
+            'password' => 'required|min:8|confirmed', // Add the 'confirmed' rule here
+        ], [
+            'password.confirmed' => 'passwords do not match!!.',
         ]);
 
         // Prepare the data for creating a new user
