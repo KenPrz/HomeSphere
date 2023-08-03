@@ -1,3 +1,23 @@
+
+const passwordInput = document.getElementById("loginPasswordInput");
+    const showPasswordIcon = document.getElementById("showPasswordIcon");
+    const hidePasswordIcon = document.getElementById("hidePasswordIcon");
+
+    showPasswordIcon.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent form submission
+        passwordInput.type = "text";
+        showPasswordIcon.style.display = "none";
+        hidePasswordIcon.style.display = "block";
+    });
+
+    hidePasswordIcon.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent form submission
+        passwordInput.type = "password";
+        hidePasswordIcon.style.display = "none";
+        showPasswordIcon.style.display = "block";
+    });
+
+
 // modal popup form script
 const createAccButton = document.querySelector("#createAcc");
 const modalContainer = document.querySelector("#modalContainer");
@@ -12,18 +32,4 @@ window.addEventListener("click", function (event) {
         modalContainer.style.display = "none";
     }
 });
-//show password function 
-function togglePasswordVisibility() {
-    var passwordInput = document.getElementById('loginPasswordInput');
-    var showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
-
-    if (showPasswordCheckbox.checked) {
-        passwordInput.type = "text";
-        confirmPasswordInput.type = "text";
-    } else {
-        passwordInput.type = "password";
-        confirmPasswordInput.type = "password";
-    }
-}
-
 

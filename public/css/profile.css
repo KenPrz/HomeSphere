@@ -73,6 +73,12 @@
     color: #000;
 }
 
+.image-buttons input[name='image']{
+    width: 32px;
+    height: 16px;
+}
+
+
 #upload-button {
     background-color: white;
     border: 1px solid #5b5b5b;

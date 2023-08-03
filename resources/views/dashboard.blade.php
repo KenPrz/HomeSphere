@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        @include('components.profile')
+        @include('components.modal')
     </div>
 @endsection
