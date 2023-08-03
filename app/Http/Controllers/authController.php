@@ -19,7 +19,8 @@ class authController extends Controller
     // Handle user login attempt
     protected function login(Request $request)
     {
-        
+        // $requestData = $request->all();
+        // dd($requestData);
         // Validate the incoming login request data
         $request->validate([
             "email" => "required|email",
@@ -27,8 +28,7 @@ class authController extends Controller
         ]);
 
         // Retrieve all request data
-        $requestData = $request->all();
-        var_dump($requestData);
+
 
         // Extract email and password from the request data
         $credentials = $request->only('email', 'password');
@@ -40,7 +40,7 @@ class authController extends Controller
         }
 
         // Redirect back to the login page with an error message if login fails
-        return redirect(route('login'))->with('error', "Invalid Email or Password");
+        return redirect(route('login'))->with('error', "invalid email or password");
     }
 
     // Handle user registration attempt
