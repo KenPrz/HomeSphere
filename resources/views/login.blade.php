@@ -58,45 +58,8 @@
         </div>
     </div>
     {{-- Row Container --}}
-    <div id="registerModal" class="hidden fixed inset-0 flex items-center justify-center z-50">
+    <div id="registerModal" class="fixed inset-0 flex items-center justify-center z-50">
         <x-register_modal/>
     </div>
 </body>
 </html>
-
-<script src="{{ asset('js/script.js') }}"></script>
-
-<script>
-// Select elements
-const createAccButton = document.getElementById("createAccButton");
-const modalContainer = document.getElementById("registerModal");
-
-// Show modal when "Register" button is clicked
-createAccButton.addEventListener("click", function () {
-    modalContainer.style.display = "flex";
-});
-
-// Hide modal when clicking outside the modal content
-window.addEventListener("click", function (event) {
-    if (event.target === modalContainer) {
-        modalContainer.style.display = "none";
-    }
-});
-
-$(document).ready(function() {
-    // Check if there is a "success" session data set from the controller
-    @if(session('success'))
-        // Get the success message from the session
-        var successMessage = "{{ session('success') }}";
-        
-        // Show the toast notification with the success message
-        showNotification(successMessage);
-    @endif
-});
-// Function to show the toast notification
-function showNotification(message) {
-    var toast = $('#registration-toast');
-    toast.text(message);
-    toast.fadeIn().delay(3000).fadeOut();
-}
-</script>

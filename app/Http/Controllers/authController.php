@@ -46,22 +46,21 @@ class authController extends Controller
     // Handle user registration attempt
     protected function register(Request $request)
     {
+        // dd($request->all());
+        // Validate the incoming login request data
         // Validate the incoming registration request data
         $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:8|confirmed', // Add the 'confirmed' rule here
-        ], [
-            'password.confirmed' => 'passwords do not match!!.',
+            'password' => 'required|min:8',
         ]);
-
         // Prepare the data for creating a new user
         $data['first_name'] = $request->firstName;
         $data['last_name'] = $request->lastName;
         $data['email'] = $request->email;
         $data['password'] = Hash::make($request->password);
-
+        // dd($data);
         // Create a new user with the provided data
         $user = User::create($data);
 
