@@ -15,6 +15,7 @@
                     {{-- Add styles here --}}
                     @csrf
                     <div class="image-buttons">
+                        {{-- pep. modals here na lng --}}
                         <label for="image">Upload:</label>
                         <input type="file" name="image" id="image">
                         <button type="submit" class="button-link">Upload</button>

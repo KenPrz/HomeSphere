@@ -19,7 +19,8 @@ class authController extends Controller
     // Handle user login attempt
     protected function login(Request $request)
     {
-        
+        // $requestData = $request->all();
+        // dd($requestData);
         // Validate the incoming login request data
         $request->validate([
             "email" => "required|email",
@@ -27,8 +28,7 @@ class authController extends Controller
         ]);
 
         // Retrieve all request data
-        $requestData = $request->all();
-        var_dump($requestData);
+
 
         // Extract email and password from the request data
         $credentials = $request->only('email', 'password');
@@ -40,28 +40,29 @@ class authController extends Controller
         }
 
         // Redirect back to the login page with an error message if login fails
-        return redirect(route('login'))->with('error', "Invalid Email or Password");
+        return redirect(route('login'))->with('error', "invalid email or password");
     }
 
     // Handle user registration attempt
     protected function register(Request $request)
     {
+        // dd($request->all());
+        // Validate the incoming login request data
         // Validate the incoming registration request data
+        // dd($request->all());
         $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:8|confirmed', // Add the 'confirmed' rule here
-        ], [
-            'password.confirmed' => 'passwords do not match!!.',
+            'password' => 'required|confirmed|min:8',
         ]);
-
+        
         // Prepare the data for creating a new user
         $data['first_name'] = $request->firstName;
         $data['last_name'] = $request->lastName;
         $data['email'] = $request->email;
         $data['password'] = Hash::make($request->password);
-
+        // dd($data);
         // Create a new user with the provided data
         $user = User::create($data);
 
