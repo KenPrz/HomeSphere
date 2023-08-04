@@ -49,12 +49,14 @@ class authController extends Controller
         // dd($request->all());
         // Validate the incoming login request data
         // Validate the incoming registration request data
+        // dd($request->all());
         $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:8',
+            'password' => 'required|confirmed|min:8',
         ]);
+        
         // Prepare the data for creating a new user
         $data['first_name'] = $request->firstName;
         $data['last_name'] = $request->lastName;

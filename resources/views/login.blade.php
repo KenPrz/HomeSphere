@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    {{-- <link rel="stylesheet" href="{{asset('css/login.css')}}"> --}}
     @vite('resources/css/app.css')
     <title>Login</title>
 </head>
+<div id="registration-toast" class="hidden fixed top-4 w-64 bg-gray-800 text-white p-4 rounded-md shadow-md transition-opacity duration-300">
+</div>
 <body class="flex justify-center items-center min-h-screen bg-gray-100 font-poppins">
     {{-- Row Container --}}
     <div class="w-full max-w-screen-lg mx-auto p-6 md:p-8 lg:p-10">
@@ -58,8 +59,38 @@
         </div>
     </div>
     {{-- Row Container --}}
-    <div id="registerModal" class="fixed inset-0 flex items-center justify-center z-50">
+    <div id="registerModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
         <x-register_modal/>
     </div>
 </body>
 </html>
+<script src="{{ asset('js/script.js') }}"></script>
+<script>
+    $(document).ready(function() {
+            // Check if there is a "success" session data set from the controller
+            @if(session('success'))
+                // Get the success message from the session
+                var successMessage = "{{ session('success') }}";
+                
+                // Show the toast notification with the success message
+                showNotification(successMessage);
+            @endif
+        });
+        // Function to show the toast notification
+        function showNotification(message) {
+            var toast = $('#registration-toast');
+            toast.text(message);
+            toast.removeClass('hidden'); // Remove the 'hidden' class to make it visible
+            toast.addClass('bg-green-500 text-white p-4 rounded-md shadow-md'); // Apply Tailwind classes for styling
+            
+            // Center the toast notification horizontally
+            toast.removeClass('right-4');
+            toast.addClass('mx-auto');
+
+            setTimeout(function() {
+                toast.removeClass('bg-green-500 text-white p-4 rounded-md shadow-md mx-auto');
+                toast.addClass('hidden right-4'); // Hide the toast after a delay
+            }, 3000);
+        }
+
+    </script>
