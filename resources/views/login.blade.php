@@ -30,7 +30,7 @@
                             <input class="w-full my-2 px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:border-blue-500" type="text" name="email" placeholder="email" required>
                             <div class="relative">
                                 <input class="w-full my-2 px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:border-blue-500" type="password" name="password" placeholder="Password" id="loginPasswordInput" required>
-                                <button class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer" id="passwordToggle">
+                                <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer" id="passwordToggle">
                                     {{-- SVGS --}}
                                     <x-fas-eye class="w-5 h-5 text-gray-500" id="showPasswordIcon" />
                                     <x-far-eye class="w-5 h-5 text-gray-500" id="hidePasswordIcon" style="display: none;" />
