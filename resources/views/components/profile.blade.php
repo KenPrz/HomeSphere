@@ -1,69 +1,54 @@
+<div class="profile-card m-5 w-3/4 rounded-lg bg-white p-8 shadow-md">
+    <div class="profile-settings mt-5 flex flex-wrap justify-between">
+        <div class="image-section mb-2 flex w-1/3 flex-col items-center justify-center p-4">
+            <div class="header">
+                <h1 class="text-xl font-bold">My Profile</h1>
+            </div>
+            @if ($user->profile_image)
+                <img src="{{ asset('storage/' . $user->profile_image) }}" alt="Profile Image"
+                    class="h-48 w-48 rounded-full p-4">
+            @else
+                <img src="{{ asset('img-assets/default_avatar.png') }}" alt="Default Image"
+                    class="h-48 w-48 rounded-full p-4">
+            @endif
+            @error('image')
+                <span class="text-red-500 text-xs">{{ $message }}</span>
+            @enderror
 
-        <div class="profile-card bg-white rounded-lg shadow-md p-8 m-5 w-3/4">
-            <div class="profile-settings mt-5 flex flex-wrap justify-between">
-                <div class="image-section mb-2 flex flex-col items-center justify-center p-4 w-1/3">
-                    <div class="header">
-                        <h1 class="font-bold text-xl">My Profile</h1>
-                    </div>
-                    @if($user->profile_image)
-                    <img src="{{ asset('storage/' . $user->profile_image) }}" alt="Profile Image"
-                        class="rounded-full h-48 w-48 p-4">
-                    @else
-                    <img src="{{ asset('img-assets/default_avatar.png') }}" alt="Default Image"
-                        class="rounded-full h-48 w-48 p-4">
-                    @endif
-                    <form action="{{ route('uploadImage') }}" method="POST" enctype="multipart/form-data"
-                        class="flex flex-col items-center mt-2">
-                        @csrf
-                        <div class="image-buttons">
-                            {{-- Add styles here --}}
-                            <label for="image" class="cursor-pointer">Upload:</label>
-                            <input type="file" name="image" id="image" class="hidden">
-                            <button type="submit" class="button-link py-1 px-2 rounded-lg">Upload</button>
-                        </div>
-                    </form>
+            <form action="{{ route('uploadImage') }}" method="POST" enctype="multipart/form-data"
+                class="mt-2 flex flex-col items-center w-ful px-2">
+                @csrf
+                <div class="image-buttons">
+                    <button type="button" class="bg-none border-2 border-gray-600 text-gray-600 rounded-lg px-3 py-1 cursor-pointer hover:bg-gray-200 hover:text-gray-800 open-modal-button">upload</button>                    
+                    <button type="button" class="bg-gray-600 border-gray-600 text-white rounded-lg px-3 py-1 cursor-pointer hover:bg-red-700 transition-colors duration-500 ease-in-out">delete</button>                    
                 </div>
-                <div class="user-details-section pt-12 w-2/3">
-                    <ul class="flex flex-col">
-                        <a href="#" class="mb-3">
-                            <li
-                                class="flex justify-between items-center bg-gray-600 p-4 rounded-lg transition duration-500 hover:bg-gray-700">
-                                <div>
-                                    <span class="text-white">Name</span><br>
-                                    <p class="text-white">{{ $user->first_name . ' ' . $user->last_name }}</p>
-                                </div>
-                                <div id="arrow"
-                                    class="transition duration-500 transform translate-x-0 hover:translate-x-[-15px]">
-                                    <img src="{{ asset('img-assets/vectors/arrow.svg') }}" alt="arrow">
-                                </div>
-                            </li>
-                        </a>
-                        <a href="#" class="mb-3">
-                            <li
-                                class="flex justify-between items-center bg-gray-600 p-4 rounded-lg transition duration-500 hover:bg-gray-700">
-                                <div>
-                                    <span class="text-white">Email</span><br>
-                                    <p class="text-white">{{ $user->email }}</p>
-                                </div>
-                                <div id="arrow"
-                                    class="transition duration-500 transform translate-x-0 hover:translate-x-[-15px]">
-                                    <img src="{{ asset('img-assets/vectors/arrow.svg') }}" alt="arrow">
-                                </div>
-                            </li>
-                        </a>
-                        <a href="#" class="mb-3">
-                            <li
-                                class="flex justify-between items-center bg-gray-600 p-4 rounded-lg transition duration-500 hover:bg-gray-700">
-                                <div>
-                                    <span class="text-white">Password and Security</span>
-                                </div>
-                                <div id="arrow"
-                                    class="transition duration-500 transform translate-x-0 hover:translate-x-[-15px]">
-                                    <img src="{{ asset('img-assets/vectors/arrow.svg') }}" alt="arrow">
-                                </div>
-                            </li>
-                        </a>
-                    </ul>
+            </form>
+
+            <div id="imageUploaderModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                <!-- Modal content -->
+                <div class="rounded-lg w-1/2 shadow-lg bg-gray-200 p-1">
+                    <!-- Your image uploader component here -->
+                    <x-image_uploader/>
                 </div>
             </div>
         </div>
+        <div class="user-details-section w-2/3 pt-12">
+            <x-user_details_component :user="$user"/>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('imageUploaderModal');
+        const openModalButton = document.querySelector('.open-modal-button');
+        openModalButton.addEventListener('click', function() {
+            modal.classList.remove('hidden');
+            // Close modal when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+    });
+</script>
