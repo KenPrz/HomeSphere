@@ -1,4 +1,4 @@
-<div class="profile-card m-5 w-3/4 rounded-lg bg-white p-8 shadow-md">
+<div class="profile-card m-5 rounded-lg bg-white p-8 shadow-md">
     <div class="profile-settings mt-5 flex flex-wrap justify-between">
         <div class="image-section mb-2 flex w-1/3 flex-col items-center justify-center p-4">
             <div class="header">

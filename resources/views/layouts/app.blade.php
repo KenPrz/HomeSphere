@@ -10,19 +10,22 @@
     @vite('resources/css/app.css')
     <title>@yield('title', 'Home')</title>
 </head>
-<body>
+<body class="w-full p-0 m-0">
     <div class="bg-white py-2 px-4 shadow-md z-20 relative sticky top-0">
         <x-navbar :user="$user"/>
     </div>
-    <div>
-        <div class="fixed bottom-0 left-0 w-1/6 bg-white shadow-md z-10">
+    <div class="flex flex-col-reverse md:flex-row">
+        <div class="fixed bottom-0 w-full md:w-1/6 bg-white shadow-md z-10 md:h-screen">
             <x-sidenav :user="$user" />
         </div>
-        <div>
-            <div class="flex justify-center items-center pl-52 h-screen ">
-                <x-profile :user="$user" />
+        
+        <div class="w-full md:flex-1">
+            <div class="flex justify-center items-center h-screen">
+                {{-- <x-profile :user="$user" /> --}}
             </div>
         </div>
     </div>
 </body>
+
+
 </html>

@@ -1,7 +1,7 @@
 
-<div class="flex flex-col h-screen justify-between">
-    <div class="py-8 px-4">
-        <div class="profile-image text-center pt-10">
+<div class="flex flex-col justify-between">
+    <div class="py-4 md:py-8 px-4">
+        <div class="profile-image text-center pt-10 md:block hidden">
             @empty($user->profile_image)
                 <img src="{{ asset('img-assets/default_avatar.png') }}" alt="Default Image" class="rounded-full w-24 h-24 mx-auto mb-2">
             @else
@@ -12,43 +12,45 @@
                 <h2 class="font-bold">{{ $user->first_name }} {{ $user->last_name }}</h2>
             </div>
         </div>
-        <div class="mt-6">
-            <ul class="flex flex-col justify-center items-start">
+        <div class="sm:mt-0 lg:mt-6">
+            <ul class="flex flex-row md:flex-col justify-center items-start">
                 <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                    <a href="#" class=" flex items-center p-2">
+                    <a href="#" class="flex items-center p-2">
                         <img src="{{asset('img-assets/nav-vectors/home.svg')}}" alt="Home" class="w-6 h-6 mr-2">
-                        Home
+                        <div class="hidden sm:block">Home</div>
                     </a>
                 </li>
                 <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
                     <a href="#" class="flex items-center p-2">
                         <img src="{{asset('img-assets/nav-vectors/account.svg')}}" alt="Profile" class="w-6 h-6 mr-2">
-                        Profile
+                        <div class="hidden sm:block">Profile</div>
                     </a>
                 </li>
                 <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
                     <a href="#" class="flex items-center p-2">
                         <img src="{{asset('img-assets/nav-vectors/devices.svg')}}" alt="Appliances" class="w-6 h-6 mr-2">
-                        Appliances
+                        <div class="hidden sm:block">Appliances</div>
                     </a>
                 </li>
                 <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
                     <a href="#" class="flex items-center p-2">
                         <img src="{{asset('img-assets/nav-vectors/rooms.svg')}}" alt="Rooms" class="w-6 h-6 mr-2">
-                        Rooms
+                        <div class="hidden sm:block">Rooms</div>
                     </a>
                 </li>
                 <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                    <a href="#" class="selection-container flex items-center p-2">
+                    <a href="#" class="flex items-center p-2">
                         <img src="{{asset('img-assets/nav-vectors/modes.svg')}}" alt="Modes" class="w-6 h-6 mr-2">
-                        Modes
+                        <div class="hidden sm:block">Modes</div>
                     </a>
                 </li>
             </ul>
         </div>
         
     </div>
-    <div class="logout-section py-4 px-4">
-        <a href="{{ route('logout') }}" class="hover:text-red-500">Logout</a>
-    </div>
+    <div class="flex flex-col h-full p-4 mt-4 hidden sm:block">
+        <div class="flex-grow logout-section py-4 px-4">
+            <a href="{{ route('logout') }}" class="hover:text-red-500">Logout</a>
+        </div>
+    </div>    
 </div>
