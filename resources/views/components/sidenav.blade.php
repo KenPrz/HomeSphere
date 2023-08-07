@@ -1,4 +1,3 @@
-
 <div class="flex flex-col justify-between">
     <div class="py-4 md:py-8 px-4">
         <div class="profile-image text-center pt-10 md:block hidden">
