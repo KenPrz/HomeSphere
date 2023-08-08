@@ -49,7 +49,7 @@
     </div>
     <div class="flex flex-col h-full p-4 mt-4 hidden sm:block">
         <div class="flex-grow logout-section py-4 px-4">
-            <a href="{{ route('logout') }}" class="hover:text-red-500">Logout</a>
+            <a href="{{ route('logout') }}" class="hover:text-red-500 duration-500">Logout</a>
         </div>
     </div>    
 </div>
