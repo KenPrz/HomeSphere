@@ -25,6 +25,5 @@
         </div>
     </div>
 </body>
-
-
 </html>
+<script src="{{ asset('js/script.js') }}"></script>

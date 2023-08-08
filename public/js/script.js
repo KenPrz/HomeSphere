@@ -7,7 +7,6 @@
     passwordToggle.addEventListener('click', () => {
         const type = loginPasswordInput.type === 'password' ? 'text' : 'password';
         loginPasswordInput.type = type;
-
         if (type === 'password') {
             showPasswordIcon.style.display = 'block';
             hidePasswordIcon.style.display = 'none';
@@ -16,16 +15,18 @@
             hidePasswordIcon.style.display = 'block';
         }
     });
-    
+
     // Function to toggle the modal
     function toggleModal() {
         const modal = document.getElementById('registerModal');
         modal.classList.toggle('hidden');
     }
+
     // Function to close the modal if clicked outside
     function closeModalOutside(event) {
         const modal = document.getElementById('registerModal');
-        if (event.target === modal) {
+        const outsideDiv = document.getElementById('outSide');
+        if (event.target === outsideDiv) {
             toggleModal();
         }
     }

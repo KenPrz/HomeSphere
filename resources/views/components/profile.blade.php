@@ -26,10 +26,10 @@
                             class="bg-gray-600 border-gray-600 text-white rounded-lg px-3 py-1 cursor-pointer hover:bg-red-700 transition-colors duration-500 ease-in-out">delete</button>
                     </div>
                 </form>
-
-                <div id="imageUploaderModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                <div id="imageUploaderModal" class="fixed inset-0 flex items-center justify-center z-30 hidden">
+                    {{-- <x-bgdim/> --}}
                     <!-- Modal content -->
-                    <div class="rounded-lg w-1/2 shadow-lg bg-gray-200">
+                    <div class="rounded-lg w-1/2 shadow-lg bg-gray-200 z-40">
                         <!-- Your image uploader component here -->
                         <x-image_uploader />
                     </div>

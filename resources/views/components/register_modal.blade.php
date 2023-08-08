@@ -1,4 +1,5 @@
-<div class="modal bg-white rounded-lg shadow-lg p-8 w-2/9">
+<x-bgdim />
+<div id="registerModal" class="modal bg-white rounded-lg shadow-lg p-8 w-2/9 z-30">
     <form action="{{ route('register') }}" method="POST" class="space-y-4">
         @csrf
         <h1 class="text-2xl font-bold mb-3">Create an account</h1>

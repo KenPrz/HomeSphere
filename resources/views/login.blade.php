@@ -60,6 +60,7 @@
     </div>
     {{-- Row Container --}}
     <div id="registerModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        
         <x-register_modal/>
     </div>
 </body>
