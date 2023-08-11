@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class bgdim extends Component
+class profile_container extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class bgdim extends Component
      */
     public function render()
     {
-        return view('components.bgdim');
+        return view('components.profile_container');
     }
 }

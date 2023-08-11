@@ -1,1 +1,0 @@
-<div id="outSide" class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50 z-20"></div>
