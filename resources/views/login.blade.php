@@ -52,16 +52,14 @@
                         <hr class="border-1 border-black w-full mx-4">
                     </div>            
                     <div class="flex flex-col items-center w-full">
-                        <button class="w-full mb-3 md:w-32 py-2 px-4 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition duration-300 register-button" id="createAccButton">Register</button>
+                        <button class="w-full mb-3 md:w-32 py-2 px-4 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition duration-300 register-button" id="createAccButton" onclick="toggleElementVisibility('registerModal')">Register</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{-- Row Container --}}
-    <div id="registerModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
-        
-        <x-register_modal/>
+    <div id="registerModal" class="register-modal hidden">
+        <x-register_modal />
     </div>
 </body>
 </html>

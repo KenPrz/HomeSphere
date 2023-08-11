@@ -1,39 +1,21 @@
-    // Event listener to show/hide password on button click
-    const passwordToggle = document.getElementById('passwordToggle');
-    const loginPasswordInput = document.getElementById('loginPasswordInput');
-    const showPasswordIcon = document.getElementById('showPasswordIcon');
-    const hidePasswordIcon = document.getElementById('hidePasswordIcon');
 
-    passwordToggle.addEventListener('click', () => {
-        const type = loginPasswordInput.type === 'password' ? 'text' : 'password';
-        loginPasswordInput.type = type;
-        if (type === 'password') {
-            showPasswordIcon.style.display = 'block';
-            hidePasswordIcon.style.display = 'none';
-        } else {
-            showPasswordIcon.style.display = 'none';
-            hidePasswordIcon.style.display = 'block';
-        }
-    });
+function togglePasswordVisibility(passwordInputId, showIconId, hideIconId) {
+    const loginPasswordInput = document.getElementById(passwordInputId);
+    const showPasswordIcon = document.getElementById(showIconId);
+    const hidePasswordIcon = document.getElementById(hideIconId);
 
-    // Function to toggle the modal
-    function toggleModal() {
-        const modal = document.getElementById('registerModal');
-        modal.classList.toggle('hidden');
+    const type = loginPasswordInput.type === 'password' ? 'text' : 'password';
+    loginPasswordInput.type = type;
+
+    showPasswordIcon.style.display = type === 'password' ? 'block' : 'none';
+    hidePasswordIcon.style.display = type === 'password' ? 'none' : 'block';
+}
+
+function toggleElementVisibility(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.classList.toggle('hidden');
+    } else {
+        console.error(`Element with ID '${elementId}' not found.`);
     }
-
-    // Function to close the modal if clicked outside
-    function closeModalOutside(event) {
-        const modal = document.getElementById('registerModal');
-        const outsideDiv = document.getElementById('outSide');
-        if (event.target === outsideDiv) {
-            toggleModal();
-        }
-    }
-
-    // Event listener to show/hide the modal on button click
-    const createAccButton = document.getElementById('createAccButton');
-    createAccButton.addEventListener('click', toggleModal);
-
-    // Event listener to close the modal if clicked outside
-    window.addEventListener('click', closeModalOutside);
+}
