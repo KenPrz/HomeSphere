@@ -19,11 +19,9 @@
                         <x-image_uploader />
                     </div>
                 </div>
-                <div id="imageDeleteModal" class="fixed inset-0 flex items-center justify-center z-30 hidden">
-                    <div class="rounded-lg w-1/2 shadow-lg bg-gray-200 z-40">
+
                         <x-confirm_deletion />
-                    </div>
-                </div>
+
             </div>
             <div class="user-details-section w-full md:w-2/3 pt-12 pr-4">
                 <x-user_details_component :user="$user" />

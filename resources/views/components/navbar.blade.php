@@ -14,7 +14,11 @@
             </li>
             <li>
                 <a href="#">
+                    @if($user->profile_image)
                     <img src="{{ asset('storage/' . $user->profile_image) }}" alt="Profile Image" class="rounded-full w-8 h-8 border-2 border-gray-800 hover:border-blue-500 transition-colors">
+                    @else
+                    <img src="{{ asset('img-assets/default_avatar.png') }}" alt="Default Image" class="rounded-full w-8 h-8 border-2 border-gray-800 hover:border-blue-500 transition-colors">
+                    @endif
                 </a>                
             </li>
         </div>

@@ -14,6 +14,7 @@ function togglePasswordVisibility(passwordInputId, showIconId, hideIconId) {
 function toggleElementVisibility(elementId) {
     const element = document.getElementById(elementId);
     if (element) {
+        console.log("clicked")
         element.classList.toggle('hidden');
     } else {
         console.error(`Element with ID '${elementId}' not found.`);

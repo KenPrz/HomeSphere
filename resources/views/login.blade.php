@@ -58,9 +58,7 @@
             </div>
         </div>
     </div>
-    <div id="registerModal" class="register-modal hidden">
         <x-register_modal />
-    </div>
 </body>
 </html>
 <script src="{{ asset('js/script.js') }}"></script>

@@ -13,6 +13,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/upload-image', [UserUpdateController::class, 'uploadImage'])->name('uploadImage');
+    Route::post('/delete-image', [UserUpdateController::class, 'deleteImage'])->name('deleteImage');
     Route::post('/change_name', [UserUpdateController::class, 'change_name'])->name('change_name');
 });
 

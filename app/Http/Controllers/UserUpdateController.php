@@ -30,4 +30,16 @@ class UserUpdateController extends Controller
         return redirect()->back()->with('success', 'Image uploaded successfully!');
     }
 
+    public function deleteImage()
+    {
+        // Delete the current profile picture if it exists
+        if (auth()->user()->profile_image) {
+            Storage::delete('public/' . auth()->user()->profile_image);
+            auth()->user()->update(['profile_image' => null]); // Update the user's profile with no image
+            return redirect()->back()->with('success', 'Image deleted successfully!');
+        }
+
+        return redirect()->back()->with('error', 'No image to delete.');
+    }
+
 }
