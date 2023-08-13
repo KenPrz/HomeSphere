@@ -13,14 +13,9 @@
         <x-navbar :user="$user"/>
     </div>
     <div class="flex flex-col-reverse md:flex-row">
-        <div class="fixed bottom-0 w-full md:w-1/6 bg-white shadow-md z-10 md:h-screen">
-            <x-sidenav :user="$user" />
-        </div>
-        <div class="w-full mt-16 md:mt-0 mb-24 md:mb-0 md:flex-1">
-            <div class="lg:ms-64 md:ms-32 h-screen">
-                <x-profile :user="$user" />
-            </div>
-        </div>
+            <x-sidenav :user="$user" />  <!--this is the sidenav -->
+            
+            <x-profile :user="$user" /> <!-- this is the profile component-->
     </div>
 </body>
 </html>
