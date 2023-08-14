@@ -9,14 +9,7 @@
     <title>@yield('title', 'Home')</title>
 </head>
 <body class="w-full p-0 m-0">
-    <div class="bg-white w-full fixed py-2 px-4 shadow-md z-20 top-0">
-        <x-navbar :user="$user"/>
-    </div>
-    <div class="flex flex-col-reverse md:flex-row">
-            <x-sidenav :user="$user" />  <!--this is the sidenav -->
-            
-            <x-profile :user="$user" /> <!-- this is the profile component-->
-    </div>
+    @yield('content');
 </body>
 </html>
 <script src="{{ asset('js/script.js') }}"></script>

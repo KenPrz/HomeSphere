@@ -15,17 +15,11 @@
                                     onclick="toggleElementVisibility('imageUploaderModal')">upload</button>
                                 <button id="deleteButton" type="button"
                                     class="cursor-pointer rounded-lg border-gray-600 bg-gray-600 px-3 py-1 text-white transition-colors duration-500 ease-in-out hover:bg-red-700"
-                                    onclick="toggleElementVisibility('imageDeleteModal')">delete</button>
+                                    onclick="toggleElementVisibility('deleteModal')">delete</button>
                             </div>
                         </form>
-                        <div id="imageUploaderModal" class="fixed inset-0 z-30 flex hidden items-center justify-center">
-                            <div class="z-40 w-1/2 rounded-lg bg-gray-200 shadow-lg">
-                                <x-image_uploader />
-                            </div>
-                        </div>
-
-                        <x-confirm_deletion />
-
+                            <x-image_uploader />
+                            <x-confirm_deletion />
                     </div>
                     <div class="user-details-section w-full pr-4 pt-12 md:w-2/3">
                         <x-user_details_component :user="$user" />

@@ -1,7 +1,7 @@
 <div class="fixed bottom-0 w-full md:w-1/6 bg-white shadow-md z-10 md:h-screen">
     <div class="flex flex-col justify-between lg:min-h-screen">
         <div class="py-4 md:py-8 px-4 ">
-            <div class="profile-image text-center pt-10 md:block hidden">
+            <div class=" lg:my-10 text-center pt-10 md:block hidden">
                 @empty($user->profile_image)
                     <img src="{{ asset('img-assets/default_avatar.png') }}" alt="Default Image" class="rounded-full w-24 h-24 mx-auto mb-2">
                 @else
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="sm:mt-0 lg:mt-6">
-                <ul class="flex flex-row md:flex-col justify-center items-start">
+                <ul class="flex flex-row md:flex-col items-start">
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
                         <a href="#" class="flex items-center p-2">
                             <img src="{{asset('img-assets/nav-vectors/home.svg')}}" alt="Home" class="w-6 h-6 mr-2">

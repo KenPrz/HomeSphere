@@ -20,3 +20,5 @@ function toggleElementVisibility(elementId) {
         console.error(`Element with ID '${elementId}' not found.`);
     }
 }
+
+

@@ -1,6 +1,6 @@
 <div id="registerModal" class="register-modal hidden">
     <div class="fixed inset-0 flex items-center justify-center z-40">
-        <div class="fixed inset-0 background-dim bg-black opacity-50"></div>
+        <div id="dimDiv" class="fixed inset-0 background-dim bg-black opacity-50"></div>
         <div class="modal w-2/9 rounded-lg bg-white p-8 shadow-lg z-50">
             <form action="{{ route('register') }}" method="POST" class="space-y-4">
                 @csrf
@@ -49,7 +49,7 @@
     //register modal
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("registerModal");
-    const dimDiv = modal.querySelector(".background-dim");
+    const dimDiv = document.getElementById("dimDiv");
 
     dimDiv.addEventListener("click", function () {
         modal.classList.add("hidden");
