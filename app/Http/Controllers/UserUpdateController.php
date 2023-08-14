@@ -65,10 +65,10 @@ class UserUpdateController extends Controller
     {
         $this->validate($request, [
             'currentPassword' => 'required',
-            'newPassword' => 'required|min:6|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@%]).{6,}$/',
+            'newPassword' => 'required|min:8',
             'password_confirmation' => 'required|same:newPassword',
         ]);
-
+        // |regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@%]).{6,}$/'
         $user = $request->user();
 
         if (!Hash::check($request->currentPassword, $user->password)) {
