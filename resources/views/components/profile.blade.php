@@ -5,7 +5,6 @@
                 <div class="profile-settings flex flex-wrap justify-between md:flex-nowrap">
                     <div class="image-section mb-2 flex w-full flex-col items-center justify-center p-4 md:w-1/3">
                         <x-profile_container :user="$user" />
-
                         <form action="{{ route('uploadImage') }}" method="POST" enctype="multipart/form-data"
                             class="mt-2 flex w-full flex-col items-center px-2">
                             @csrf
@@ -18,8 +17,8 @@
                                     onclick="toggleElementVisibility('deleteModal')">delete</button>
                             </div>
                         </form>
-                            <x-image_uploader />
-                            <x-confirm_deletion />
+                            <x-modals.image_uploader_modal />
+                            <x-modals.confirm_deletion_modal />
                     </div>
                     <div class="user-details-section w-full pr-4 pt-12 md:w-2/3">
                         <x-user_details_component :user="$user" />

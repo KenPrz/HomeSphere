@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-        <x-register_modal />
+        <x-modals.register_modal />
 </body>
 </html>
 <script src="{{ asset('js/script.js') }}"></script>

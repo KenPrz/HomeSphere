@@ -1,5 +1,5 @@
 <ul class="flex flex-col">
-    <a href="#" class="mb-3">
+    <a onclick="toggleElementVisibility('changeNameModal')" class="mb-3 hover:cursor-pointer">
         <li
             class="flex items-center justify-between rounded-lg bg-gray-600 p-4 transition duration-500 hover:bg-gray-700">
             <div>
@@ -12,7 +12,7 @@
             </div>
         </li>
     </a>
-    <a href="#" class="mb-3">
+    <a onclick="toggleElementVisibility('emailUpdateModal')" class="mb-3 hover:cursor-pointer">
         <li
             class="flex items-center justify-between rounded-lg bg-gray-600 p-4 transition duration-500 hover:bg-gray-700">
             <div>
@@ -25,7 +25,7 @@
             </div>
         </li>
     </a>
-    <a href="#" class="mb-3">
+    <a onclick="toggleElementVisibility('passwordUpdateModal')" class="mb-3 hover:cursor-pointer">
         <li
             class="flex items-center justify-between rounded-lg bg-gray-600 p-4 transition duration-500 hover:bg-gray-700">
             <div>
@@ -38,3 +38,7 @@
         </li>
     </a>
 </ul>
+<x-modals.change_name_modal :user="$user"/>
+<x-modals.email_update_modal :user="$user"/>
+<x-modals.password_update_modal :user="$user"/>
+<script src="{{ asset('js/script.js') }}"></script>

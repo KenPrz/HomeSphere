@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class confirm_deletion extends Component
+class password_update_modal extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class confirm_deletion extends Component
      */
     public function render()
     {
-        return view('components.confirm_deletion');
+        return view('components.modals.password_update_modal');
     }
 }
