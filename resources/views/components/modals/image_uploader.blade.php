@@ -1,4 +1,4 @@
-{{-- Deprecated version --}}
+{{-- Deprecated version of uploader --}}
 
 <div id="imageUploaderModal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75 hidden">
     <div id="uploaderDimDiv" class="fixed inset-0 bg-black opacity-50"></div>
