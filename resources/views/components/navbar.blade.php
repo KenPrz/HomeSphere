@@ -6,11 +6,11 @@
                 HomeSphere
             </a>
         </li>        
-        <div class="flex items-center space-x-4 md:justify-end hidden md:flex">
+        <div class="flex items-center space-x-1 md:justify-end hidden md:flex">
             <li>
-                <a href="#" class="hover:text-gray-400">
-                    Notification
-                </a>
+                <a href="#" class="group hover:text-gray-400">
+                    <img src="{{asset('img-assets/nav-vectors/Notification.svg')}}" alt="Profile" class="w-8 h-auto mr-2 bg-gray-600 rounded-full p-2 group-hover:bg-gray-400 group-hover:border-gray-400 border-1 border-transparent transition duration-300">
+                </a>                               
             </li>
             <li>
                 <a href="#">

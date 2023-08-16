@@ -19,8 +19,6 @@
         </div>
     </form>
 </div>
-
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const imageUploaderModal = document.getElementById("imageUploaderModal");
