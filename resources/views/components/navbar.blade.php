@@ -34,7 +34,6 @@
         </div>
     </ul>
 </div>
-
 <script>
     // JavaScript to toggle dropdown visibility
     document.getElementById('notificationDropdown').addEventListener('click', function () {

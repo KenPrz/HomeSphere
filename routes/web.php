@@ -7,7 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserUpdateController;
 use App\Http\Controllers\ChangeEmailController;
 
-Route::get('/', function () {
+Route::get('/   ', function () {
     return Auth::check() ? redirect()->route('dashboard') : redirect()->route('showLogin');
 })->name('home');
 
