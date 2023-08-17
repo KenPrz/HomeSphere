@@ -7,6 +7,6 @@
 <div class="flex flex-col-reverse md:flex-row">
         <x-sidenav :user="$user" /> <!-- this is the sidenav -->
         {{-- Make this the dashboard container --}}
-        {{-- <x-profile :user="$user" /> <!-- this is the profile component --> --}}
+        <x-profile :user="$user" /> <!-- this is the profile component -->
 </div>
 @endsection

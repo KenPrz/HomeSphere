@@ -1,6 +1,6 @@
 <div id="profileDropdownContent" class=" flex flex-col absolute right-0 mt-2 py-2 w-80 h-auto bg-white border rounded-lg shadow-lg hidden">
     <!-- Profile Dropdown Options -->
-    <div class="h-1/2 py-2 px-3 mx-4 my-2 shadow-md">
+    <div class="h-1/2 py-2 px-3 mx-4 my-2 shadow-md rounded-md">
         <div class="border-b-2 py-1">
             <a href="#" class="block px-4 py-2 rounded-md text-blue-600 hover:bg-gray-100 ">
                 <div class="flex">
