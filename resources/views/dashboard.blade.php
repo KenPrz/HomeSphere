@@ -1,12 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="bg-white w-full fixed py-2 px-4 shadow-md z-20 top-0">
-    <x-navbar :user="$user"/>
-</div>
-<div class="flex flex-col-reverse md:flex-row">
-        <x-sidenav :user="$user" /> <!-- this is the sidenav -->
-        {{-- Make this the dashboard container --}}
-        <x-profile :user="$user" /> <!-- this is the profile component -->
+<div class="grid grid-cols-1 min-h-screen">
+    <!-- Navbar -->
+    <div class="sticky top-0 bg-white max-h-14 py-2 px-4 shadow-md z-20">
+        <x-navbar :user="$user"/>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="md:flex"> <!-- Use md:flex for horizontal layout on medium screens and above -->
+        <!-- Profile Container -->
+        <div class="md:w-5/6 px-4 py-8">
+            <x-profile :user="$user" />
+        </div>
+
+        <!-- Side/Bottom Navigation Bar -->
+        <div class="fixed bottom-0 w-full md:w-1/6 bg-white shadow-md z-10 md:h-screen">
+            <x-sidenav :user="$user" />
+        </div>
+    </div>
 </div>
 @endsection
