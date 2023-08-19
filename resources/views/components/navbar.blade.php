@@ -1,7 +1,7 @@
 <div class="container mx-auto">
     <ul class="flex flex-col md:flex-row justify-between items-center">
         <li class="nav-item title md:mb-0 mb-2 md:mr-0 mr-2">
-            <a href="#" class="text-xl font-bold md:text-center text-center flex items-center hover:text-blue-500 transition-colors">
+            <a href="{{route('dashboard')}}" class="text-xl font-bold md:text-center text-center flex items-center hover:text-blue-500 transition-colors">
                 <img src="{{ asset('img-assets/favicons/android-chrome-512x512.png') }}" alt="Default Image" class="h-10 w-10 rounded-full p-1 mr-2 hover:scale-110 transition-transform">
                 HomeSphere
             </a>
