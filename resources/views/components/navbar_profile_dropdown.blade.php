@@ -2,7 +2,7 @@
     <!-- Profile Dropdown Options -->
     <div class="h-1/2 py-2 px-3 mx-4 my-2 shadow-md rounded-md">
         <div class="border-b-2 py-1">
-            <a href="#" class="block px-4 py-2 rounded-md text-blue-600 hover:bg-gray-100 ">
+            <a href="#" class="block px-4 py-2 rounded-md text-blue-600 hover:bg-gray-200  ">
                 <div class="flex">
                     <div>
                         @if($user->profile_image)
@@ -19,7 +19,7 @@
                 </div>
             </a>
         </div>
-        <div class="p-2 mt-3">
+        <div class="p-2 mt-3 hover:bg-gray-200 rounded-md duration-300">
             <a href="#" class="hover:text-blue-500 duration-300">
                 <p class="text-sm pl-3 font-semibold">View profile</p>
             </a>

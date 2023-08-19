@@ -21,7 +21,7 @@
                         <input name="lastName" type="text" class="w-full focus:outline-none">
                     </div>
                 </div>
-                <div class="item-cente flex justify-center pt-8">
+                <div class="item-center flex justify-center pt-8">
                     <button type="submit"
                         class="my-2 w-full rounded-full bg-blue-900 px-2 py-3 text-white transition duration-300 ease-in-out hover:bg-blue-800">Change
                         Name</button>
@@ -31,7 +31,7 @@
     </div>
 </div>
 <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
         const changeNameModal = document.getElementById("changeNameModal");
         const changeNameDimDiv = document.getElementById("changeNameDimDiv");
         changeNameDimDiv.addEventListener("click", function () {
