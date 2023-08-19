@@ -1,4 +1,4 @@
-<div class="fixed bottom-0 w-full md:w-1/6 bg-white shadow-md z-10 md:h-screen">
+<div class="fixed bottom-0 w-full md:w-1/6 bg-white shadow-md md:h-screen">
     <div class="flex flex-col justify-between lg:min-h-screen">
         <div class="py-4 md:py-8 px-4 ">
             <div class=" lg:my-10 text-center pt-10 md:block hidden">
