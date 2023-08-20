@@ -17,8 +17,7 @@
 
         <!-- Main Content -->
         <div class="flex-1 p-4 lg:ml-72 h-screen">
-            <!-- Your main content goes here -->
-            <x-profile :user="$user"/>
+            @yield('page-content')
         </div>
     </div>
 </div>

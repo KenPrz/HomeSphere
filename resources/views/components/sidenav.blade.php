@@ -15,38 +15,38 @@
             <div class="sm:mt-0 lg:mt-6">
                 <ul class="flex flex-row md:flex-col items-start">
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                        <a href="#" class="flex items-center p-2">
+                        <a href="{{ route('home') }}" class="flex items-center p-2">
                             <img src="{{asset('img-assets/nav-vectors/home.svg')}}" alt="Home" class="w-6 h-6 mr-2">
                             <div class="hidden sm:block">Home</div>
                         </a>
                     </li>
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                        <a href="#" class="flex items-center p-2">
-                            <img src="{{asset('img-assets/nav-vectors/devices.svg')}}" alt="Home" class="w-6 h-6 mr-2">
+                        <a href="{{ route('appliances') }}" class="flex items-center p-2">
+                            <img src="{{asset('img-assets/nav-vectors/devices.svg')}}" alt="Appliances" class="w-6 h-6 mr-2">
                             <div class="hidden sm:block">Appliances</div>
                         </a>
                     </li>
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                        <a href="#" class="flex items-center p-2">
+                        <a href="{{ route('rooms') }}" class="flex items-center p-2">
                             <img src="{{asset('img-assets/nav-vectors/rooms.svg')}}" alt="Rooms" class="w-6 h-6 mr-2">
                             <div class="hidden sm:block">Rooms</div>
                         </a>
                     </li>
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                        <a href="#" class="flex items-center p-2">
+                        <a href="{{ route('modes') }}" class="flex items-center p-2">
                             <img src="{{asset('img-assets/nav-vectors/modes.svg')}}" alt="Modes" class="w-6 h-6 mr-2">
                             <div class="hidden sm:block">Modes</div>
                         </a>
                     </li>
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                        <a href="#" class="flex items-center p-2">
+                        <a href="{{ route('profile') }}" class="flex items-center p-2">
                             <img src="{{asset('img-assets/nav-vectors/account.svg')}}" alt="Profile" class="w-6 h-6 mr-2">
                             <div class="hidden sm:block">Profile</div>
                         </a>
                     </li>
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                        <a href="#" class="flex items-center p-2">
-                            <img src="{{asset('img-assets/nav-vectors/settings.svg')}}" alt="Profile" class="w-6 h-6 mr-2">
+                        <a href="{{ route('settings') }}" class="flex items-center p-2">
+                            <img src="{{asset('img-assets/nav-vectors/settings.svg')}}" alt="Settings" class="w-6 h-6 mr-2">
                             <div class="hidden sm:block">Settings</div>
                         </a>
                     </li>
@@ -64,3 +64,4 @@
         </div>
     </div>
 </div>
+
