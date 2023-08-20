@@ -7,6 +7,12 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserUpdateController;
 use App\Http\Controllers\ChangeEmailController;
 
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AppliancesController;
+use App\Http\Controllers\RoomsController;
+use App\Http\Controllers\ModesController;
+use App\Http\Controllers\SettingsController;
+
 Route::get('/', function () {
     return Auth::check() ? redirect()->route('dashboard') : redirect()->route('showLogin');
 })->name('home');
@@ -18,6 +24,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/change-name', [UserUpdateController::class, 'changeName'])->name('changeName');
     Route::post('/change-email', [ChangeEmailController::class, 'changeEmail'])->name('changeEmail');
     Route::post('/change-password', [UserUpdateController::class, 'changePassword'])->name('changePassword');
+
+    //Navigation routes
+    Route::get('/appliances', [AppliancesController::class, 'index'])->name('appliances');
+    Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
+    Route::get('/modes', [ModesController::class, 'index'])->name('modes');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 });
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
