@@ -40,3 +40,7 @@ Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/setup', function() {
+    return view('setup');
+});
