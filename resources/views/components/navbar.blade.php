@@ -59,4 +59,3 @@
         document.getElementById('profileDropdownContent').classList.add('hidden');
     }
 </script>
-

@@ -34,7 +34,7 @@
                                     {{-- SVGS --}}
                                     <x-fas-eye class="w-5 h-5 text-gray-500" id="showPasswordIcon" />
                                     <x-far-eye class="w-5 h-5 text-gray-500" id="hidePasswordIcon" style="display: none;" />
-                                </button>                                
+                                </button>                    
                             </div>
                             @if(session('error'))
                                 <div class="alert alert-danger text-sm text-red-400">
