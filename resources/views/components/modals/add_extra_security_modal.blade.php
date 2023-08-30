@@ -2,6 +2,14 @@
     <div id="addExtraSecurityDimDiv" class="fixed inset-0 bg-black opacity-50"></div>
     <div class="flex flex-col w-1/3 z-50 h-auto bg-white rounded-md">
         <div class="p-10">
+            <div class="flex items-center justify-between">
+                <div id="angle_left">
+                    <img src="{{ asset('img-assets/vectors/angle_left.svg') }}" alt="angle_left">
+                </div>
+                <div id="close" class="ml-1">
+                    <img src="{{ asset('img-assets/vectors/close.svg') }}" alt="close">
+                </div>
+            </div>            
             <div>
                 <h1 class="py-2 text-xl font-bold sm:py-4 sm:text-2xl md:text-lg">Add extra security to your account</h1>
             </div>
@@ -14,7 +22,7 @@
                         <h1 class="text-sm  font-semibold">Email message</h1>
                     </div>
                     <div>
-                        <p class="text-xs">We'll send a code to your email</p>
+                        <p class="text-xs my-1">We'll send a code to your email</p>
                     </div>
                 </div>
                 <a href="#" class="rounded-full text-white text-sm bg-blue-600 border mt-3 py-3 p-2 px-3 hover:bg-blue-900 flex items-center justify-center">

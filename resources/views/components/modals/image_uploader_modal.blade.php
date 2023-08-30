@@ -18,6 +18,11 @@
     </form>
 </div>
 
+@if(session('success'))
+    <div id="successMessage" class="absolute top-2 left-1/2 transform -translate-x-1/2 h-10 z-50 bg-blue-500 text-white text-center py-2 w-1/4 rounded-md">
+        {{ session('success') }}
+    </div>
+@endif
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
