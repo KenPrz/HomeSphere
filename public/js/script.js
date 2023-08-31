@@ -1,4 +1,3 @@
-
 function togglePasswordVisibility(passwordInputId, showIconId, hideIconId) {
     const loginPasswordInput = document.getElementById(passwordInputId);
     const showPasswordIcon = document.getElementById(showIconId);

@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class image_uploader extends Component
+class change_name_modal extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class image_uploader extends Component
      */
     public function render()
     {
-        return view('components.image_uploader');
+        return view('components.change_name_modal');
     }
 }

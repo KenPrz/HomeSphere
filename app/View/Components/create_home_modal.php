@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class register_modal extends Component
+class create_home_modal extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class register_modal extends Component
      */
     public function render()
     {
-        return view('components.modals.register_modal');
+        return view('components.modals.create_home_modal');
     }
 }

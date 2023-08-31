@@ -8,7 +8,7 @@
                     <button onclick="toggleElementVisibility('deleteModal')"id="cancel-button" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 focus:outline-none">
                         Cancel
                     </button>
-                    <form method="post" action="{{ route('deleteImage')}}">
+                    <form method="post" action="{{ route('deleteImage')}}" class="p-0 m-0">
                         @csrf
                         <button id="confirm-button" class="ml-2 px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-lg hover:bg-red-600 focus:outline-none focus:shadow-outline-red active:bg-red-700">
                             Confirm
