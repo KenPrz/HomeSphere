@@ -3,26 +3,29 @@
     <div class="flex flex-col w-1/3 z-50 h-auto bg-white rounded-md">
         <div class="p-10">
         <div class="flex items-center justify-between">
-            <div id="angle_left">
+            <div id="angle_left" class="hover:bg-gray-300">
                 <img src="{{ asset('img-assets/vectors/angle_left.svg') }}" alt="angle_left">
             </div>
-            <div id="close" class="ml-1">
+            <div id="close" class="ml-1 hover:bg-gray-300">
                 <img src="{{ asset('img-assets/vectors/close.svg') }}" alt="close">
             </div>
         </div>
             <div>
                 <h1 class="py-2 text-xl font-bold sm:py-4 sm:text-2xl md:text-2xl">Login Alerts</h1>
             </div>
-            <li class="flex flex-col rounded-lg p-4 my-3 transition duration-500 border border-gray-300">
+            <li class="flex flex-col rounded-lg p-4 my-3 transition duration-500 border border-gray-300 relative">
                 <div class="flex items-center"> <!-- Added a flex container for alignment -->
                     <div id="email" class="ml-1">
                         <img src="{{ asset('img-assets/vectors/email.svg') }}" alt="email">
                     </div>
-                    <h1 class="text-black font-semibold text-xs ml-2">Email</h1> <!-- Added ml-2 for some spacing between image and text -->
+                    <h1 class="text-black font-semibold text-xs ml-2">Email</h1> <!-- Added ml-2 for spacing between image and text -->
                 </div>
                 <div>
                     <p class="text-black text-xs mx-7">{{ $user->email }}</p>
-                </div>     
+                </div> 
+                <div class="absolute top-1/2 right-1 transform -translate-y-1/2 mx-3">
+                    <input id="link-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                </div>
             </li>
             <a href="#" class="rounded-full text-white text-sm bg-blue-600 border mt-10 py-3 p-2 px-3 hover:bg-blue-900 flex items-center justify-center">
                 <div>

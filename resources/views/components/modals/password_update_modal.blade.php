@@ -4,10 +4,10 @@
         <div class="w-full rounded-md bg-white p-4 shadow-lg sm:w-1/2 sm:p-8 md:w-1/3 lg:w-1/3 z-50">
             <div class="py-2">
                 <div class="flex items-center justify-between">
-                    <div id="angle_left">
+                    <div id="angle_left" class="hover:bg-gray-300">
                         <img src="{{ asset('img-assets/vectors/angle_left.svg') }}" alt="angle_left">
                     </div>
-                    <div id="close" class="ml-1">
+                    <div id="close" class="ml-1 hover:bg-gray-300">
                         <img src="{{ asset('img-assets/vectors/close.svg') }}" alt="close">
                     </div>
                 </div> 

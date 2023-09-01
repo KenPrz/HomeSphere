@@ -3,14 +3,14 @@
     <div class="flex flex-col w-1/3 z-50 h-auto bg-white rounded-md">
         <div class="p-10">
             <div class="flex justify-end"> 
-                <div id="close" class="ml-1">
+                <div id="close" class="ml-1 hover:bg-gray-300">
                     <img src="{{ asset('img-assets/vectors/close.svg') }}" alt="close">
                 </div>
             </div>    
             <div>
                 <h1 class="py-2 text-xl font-bold sm:py-4 sm:text-2xl md:text-xl">Password and Security</h1>
             </div>
-            <div>
+            <div>   
                 <p class="my-3 m:text-md text-sm">Login and Recovery</p>
             </div>
             <div class="flex flex-col">
