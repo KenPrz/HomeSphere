@@ -7,10 +7,11 @@
 
     <div class = "flex-grow mx-10 mt-5 p-3 rounded-lg bg-white">
         <div class = "flex item-center border border-gray-500 py-2 w-1/2 rounded-full text-1xl text-left">
-            <div id = "search" class = "ml-5">
+            <div id= "search" class = "ml-5">
                 <img src = "{{ asset('img-assets\list-app-vectors\search.svg') }}" alt="search">
             </div>
-            <h1 class = "flex items-center ml-4 text-sm">Search</h1>
+            <input placeholder="Search" class="flex items-center ml-4 text-sm w-96 focus:outline-none">
+
         </div>
     </div>
 
