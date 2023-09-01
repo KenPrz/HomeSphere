@@ -8,6 +8,7 @@ use App\Http\Controllers\UserUpdateController;
 use App\Http\Controllers\ChangeEmailController;
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AppliancesController;
 
 Route::get('/', function () {
     return Auth::check() ? redirect()->route('dashboard') : redirect()->route('showLogin');
@@ -23,6 +24,7 @@ Route::middleware('auth')->group(function () {
 
     //Navigation routes
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/appliances', [AppliancesController::class, 'index'])->name('appliances');
 });
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
