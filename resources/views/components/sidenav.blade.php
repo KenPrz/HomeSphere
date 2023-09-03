@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li class="p-2 hover:bg-slate-400 rounded-lg w-full transition-colors duration-500 ease-in-out">
-                        <a href="#" class="flex items-center p-2">
+                        <a href="{{ route('appliances') }}" class="flex items-center p-2">
                             <img src="{{asset('img-assets/nav-vectors/devices.svg')}}" alt="Appliances" class="w-6 h-6 mr-2">
                             <div class="hidden sm:block">Appliances</div>
                         </a>

@@ -25,7 +25,7 @@
             </div>
         </li>
     </a>
-    <a onclick="toggleElementVisibility('passwordUpdateModal')" class="mb-3 hover:cursor-pointer">
+    <a onclick="toggleElementVisibility('passwordSecurityModal')" class="mb-3 hover:cursor-pointer">
         <li
             class="flex items-center justify-between rounded-lg bg-gray-600 p-4 transition duration-500 hover:bg-gray-700">
             <div>
@@ -38,6 +38,7 @@
         </li>
     </a>
 </ul>
+<x-modals.password_security_modal :user="$user"/>
 <x-modals.change_name_modal :user="$user"/>
 <x-modals.email_update_modal :user="$user"/>
 <x-modals.password_update_modal :user="$user"/>
