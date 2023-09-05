@@ -8,7 +8,7 @@
             </div>
             <div id="close" class="ml-1 hover:bg-gray-300">
                 <img src="{{ asset('img-assets/vectors/close.svg') }}" alt="close">
-            </div>    ukku
+            </div>
         </div>
             <div>
                 <h1 class="py-2 text-xl font-bold sm:py-4 sm:text-2xl md:text-2xl">Login Alerts</h1>
