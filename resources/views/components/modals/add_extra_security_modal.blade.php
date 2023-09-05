@@ -30,9 +30,6 @@
                     </div>
                 </div>
                 </div>    
-
-
-
                 <a href="#" class="rounded-full text-white text-sm bg-blue-600 border mt-3 py-3 p-2 px-3 hover:bg-blue-900 flex items-center justify-center">
                     <div>
                         <h1 class="text-md text-white text-sm font-semibold">Done</h1>
