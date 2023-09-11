@@ -2,14 +2,14 @@
 @section('page-content')
     <div class="flex flex-col lg:h-screen items-center justify-center">
     <div class="profile-card m-5 rounded-lg bg-white p-8 shadow-md lg:w-2/3">
-        <div class="profile-settings flex flex-wrap justify-between md:flex-nowrap">
+        <div class="profile-settings flex flex-wrap justify-between md:flex-nowrap"> 
             <div class="image-section mb-2 flex w-full flex-col items-center justify-center p-4 md:w-1/3">
                 <x-profile_container :user="$user" />
                 <form action="{{ route('uploadImage') }}" method="POST" enctype="multipart/form-data"
                     class="mt-2 flex w-full flex-col items-center px-2">
                     @csrf
                     <div class="image-buttons flex md:justify-start">
-                        <button id="uploadButton" type="button"
+                        <button id="uploadBuutton" type="button"
                             class="open-modal-button mr-2 cursor-pointer rounded-lg border-2 border-gray-600 bg-none px-3 py-1 text-gray-600 hover:bg-gray-200 hover:text-gray-800"
                             onclick="toggleElementVisibility('imageUploaderModal')">Upload</button>
                         <button id="deleteButton" type="button"
