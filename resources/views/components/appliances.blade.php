@@ -11,7 +11,6 @@
                 <img src = "{{ asset('img-assets\list-app-vectors\search.svg') }}" alt="search">
             </div>
             <input placeholder="Search" class="flex items-center ml-4 text-sm w-96 focus:outline-none">
-
         </div>
     </div>
 
