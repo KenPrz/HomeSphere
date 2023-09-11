@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/appliances', [AppliancesController::class, 'index'])->name('appliances');
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
 });
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
