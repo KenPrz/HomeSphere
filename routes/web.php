@@ -23,8 +23,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/change-name', [UserUpdateController::class, 'changeName'])->name('changeName');
     Route::post('/change-email', [ChangeEmailController::class, 'changeEmail'])->name('changeEmail');
     Route::post('/change-password', [UserUpdateController::class, 'changePassword'])->name('changePassword');
-
-    //Navigation routes
+    Route::get('/appliances', [AppliancesController::class, 'index'])->name('appliances');
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 });
 
