@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserUpdateController;
 use App\Http\Controllers\ChangeEmailController;
+use App\Http\Controllers\RoomsController;
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AppliancesController;
@@ -25,6 +26,9 @@ Route::middleware('auth')->group(function () {
 
     //Navigation routes
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
+
+
 });
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');

@@ -59,7 +59,7 @@ class UserUpdateController extends Controller
         $user->save();
 
         // Redirect the user back to the home page
-        return redirect()->back()->with('success', 'user successfully!');
+        return redirect()->back()->with('success', 'Username changed successfully.');
     }
     public function changePassword(Request $request)
     {
